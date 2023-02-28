@@ -3,3 +3,5 @@ pandas
 matplotlib
 plotly
 scikit_learn
+streamlit
+latex2sympy2

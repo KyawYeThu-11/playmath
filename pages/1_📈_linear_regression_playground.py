@@ -56,12 +56,24 @@ def main():
     with col2:
         st.image("images/icon.png")
 
-    st.markdown("<h2 style='text-align: center;'>Linear Regression Demo</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center;'>Linear Regression Playground</h2>", unsafe_allow_html=True)
     st.markdown('''
         Upload any **csv** file containing **2 columns** containing numbers. Linear regression will be used to learn
         a relationship between the two columns and output a model eventually. This model can be used to predict **the value 
         of the second column if given a value of the first column.**  
     ''')
+
+    st.write("Here are samples of the csv file required to get started with. Click to download!")
+    col3, col4, col5 = st.columns(3)
+    with col3:
+        with open("datasets/life_satisfaction_prediction.csv", "rb") as file:
+            st.download_button(label="Life Satisfaction Data", data=file, file_name="life_satisfaction_prediction.csv")
+    with col4:
+        with open("datasets/sales_prediction.csv", "rb") as file:
+            st.download_button(label="Sales Data", data=file, file_name="sales_prediction.csv")
+    with col5:
+        with open("datasets/weight_gained_prediction.csv", "rb") as file:
+            st.download_button(label="Weight Gained Data", data=file, file_name="weight_gained_prediction.csv")
 
     ## Upload Data
     st.header('Upload Data')
