@@ -6,7 +6,6 @@ def main():
         st.image("images/function.png")
     
     st.markdown("<h2 style='text-align: center;'>Playmath</h2>", unsafe_allow_html=True)
-
     st.markdown('''
         Welcome to "**Playmath**", a place where you can fiddle with simple yet powerful tools to gain 
         better intuition in various maths domains!
